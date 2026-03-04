@@ -1,0 +1,16 @@
+   69  cd ~/bioinformatics_hw\ngit add linux_task/data/raw\ngit commit -m "Create raw data structure"\ngit push
+   70  cd linux_task/data/raw
+   71  cat > sequencing_summary.txt << 'EOF'\nrun_id: RUN001\ndate: 2026-02-18\nsample: sample1\nplatform: Illumina\nread_length: 150\ntotal_reads: 1024\nsample: sample2\ntotal_reads: 2048\nsample: sample3\ntotal_reads: 4096\nEOF
+   72  grep "sample" sequencing_summary.txt > samples_list.txt
+   73  count=$(wc -l < samples_list.txt); echo "Total samples found: $count" >> samples_list.txt
+   74  tail -n 5 samples_list.txt
+   75  cd ~/bioinformatics_hw\ngit add linux_task/data/raw/sequencing_summary.txt linux_task/data/raw/samples_list.txt\ngit commit -m "Add sample list and count"\ngit push
+   76  git log --oneline --decorate --graph --all
+   77  git checkout -b git-practice
+   78  printf "This is very important data.\n" > important_note.txt
+   79  git add important_note.txt\ngit commit -m "Add important note"
+   80  rm important_note.txt\nls\ngit status
+   81  git restore important_note.txt
+   82  ls\ncat important_note.txt
+   83  echo "git restore important_note.txt" > git_command.txt
+   84  git add important_note.txt git_command.txt\ngit commit -m "Restore deleted file"\ngit push -u origin git-practice
