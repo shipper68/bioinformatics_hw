@@ -15,3 +15,4 @@ This folder contains the report and supplementary files for homework 4.
 1. Genome assembly with Velvet using several k-mer values.
 2. Comparison of Velvet and SPAdes assemblies using QUAST.
 3. Improved assemblies with modified parameters and final comparison.
+
