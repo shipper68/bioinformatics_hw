@@ -1,0 +1,89 @@
+/home/STUDY/FBMF/bioinformatics/anaconda3/bin/quast.py -o quast_comparison -m 0 --threads 4 --gene-finding --labels SPAdes,SPAdes_upgrade,Velvet_k31,Velvet_upgrade /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/scaffolds.fasta /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades_upgrade/scaffolds.fasta /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet/results/k31/contigs.fa /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet_improved/k31/contigs.fa
+
+Version: 5.3.0
+
+System information:
+  OS: Linux-5.14.0-611.47.1.el9_7.x86_64-x86_64-with-glibc2.34 (linux_64)
+  Python version: 3.13.9
+  CPUs number: 4
+
+Started: 2026-05-04 18:33:04
+
+Logging to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/quast.log
+
+CWD: /home/STUDY/FBMF/studfbmf02_01/hw4
+Main parameters: 
+  MODE: default, threads: 4, min contig length: 0, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  1  /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/scaffolds.fasta ==> SPAdes
+  2  /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades_upgrade/scaffolds.fasta ==> SPAdes_upgrade
+  3  /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet/results/k31/contigs.fa ==> Velvet_k31
+  4  /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet_improved/k31/contigs.fa ==> Velvet_upgrade
+
+2026-05-04 18:33:05
+Running Basic statistics processor...
+  Contig files: 
+    1  SPAdes
+    2  SPAdes_upgrade
+    3  Velvet_k31
+    4  Velvet_upgrade
+  Calculating N50 and L50...
+    1  SPAdes, N50 = 440, L50 = 12, auN = 484.1, Total length = 15064, GC % = 45.47, # N's per 100 kbp =  0.00
+    2  SPAdes_upgrade, N50 = 440, L50 = 11, auN = 487.9, Total length = 13998, GC % = 45.37, # N's per 100 kbp =  0.00
+    3  Velvet_k31, N50 = 104, L50 = 185, auN = 114.7, Total length = 51988, GC % = 47.88, # N's per 100 kbp =  0.00
+    4  Velvet_upgrade, N50 = 243, L50 = 6, auN = 289.3, Total length = 3453, GC % = 44.92, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/GC_content_plot.pdf
+  Drawing SPAdes GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/SPAdes_GC_content_plot.pdf
+  Drawing SPAdes_upgrade GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/SPAdes_upgrade_GC_content_plot.pdf
+  Drawing Velvet_k31 GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/Velvet_k31_GC_content_plot.pdf
+  Drawing Velvet_upgrade GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/Velvet_upgrade_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/coverage_histogram.pdf
+  Drawing SPAdes coverage histogram (bin size: 25x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/SPAdes_coverage_histogram.pdf
+  Drawing SPAdes_upgrade coverage histogram (bin size: 42x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/SPAdes_upgrade_coverage_histogram.pdf
+  Drawing Velvet_k31 coverage histogram (bin size: 1x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/Velvet_k31_coverage_histogram.pdf
+  Drawing Velvet_upgrade coverage histogram (bin size: 18x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/basic_stats/Velvet_upgrade_coverage_histogram.pdf
+Done.
+
+2026-05-04 18:33:07
+WARNING: GeneMark tool can't be started because of license limitations!
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-05-04 18:33:07
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2026-05-04 18:33:08
+RESULTS:
+  Text versions of total report are saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/report.html
+  PDF version (tables and plots) is saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/report.pdf
+  Icarus (contig browser) is saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/icarus.html
+  Log is saved to /home/STUDY/FBMF/studfbmf02_01/hw4/quast_comparison/quast.log
+
+Finished: 2026-05-04 18:33:08
+Elapsed time: 0:00:03.497688
+NOTICEs: 1; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

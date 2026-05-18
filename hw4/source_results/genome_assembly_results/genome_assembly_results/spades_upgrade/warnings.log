@@ -1,0 +1,4 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:00.992     2M / 347M  WARN    General                 (pair_info_count.cpp       : 203)   Estimated mean insert size 108.697 is very small compared to read length 151
+======= Warnings saved to /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades_upgrade/warnings.log

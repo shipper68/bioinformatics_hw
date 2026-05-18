@@ -1,0 +1,240 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Before_start_LMVF5HMOIP6PANREWXB9XOC9PQDCVOFR
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_9ST3JWJVGUB5IP3E260AA4GG7G7VJTGG
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_vyl05kvn
+  job_uuid: SPAdes_Read_error_correction_WV1W7THZG76CE29RX3XSKLBCUB05Y58S
+  mpi_support: false
+  output_files:
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/corrected/corrected.yaml
+  path: /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/bin/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/share/spades
+  - --max_threads
+  - '16'
+  - --output_dir
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_corrected_reads_compression_N0T91HUBU2E4D4DDMDEU0Q1XPMJ91G1P
+  mpi_support: false
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/anaconda3/bin/python3
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_QBXB9G3E736HH9HNR520CMDWKC216LQ3
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_WWNQIWWKWI2CZEDEU3NG4ZMSU80NKKKS
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K21/configs/config.info
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K21/configs/careful_mode.info
+  config_dir: K21
+  del_after: []
+  job_uuid: hpcSPAdes_K21_UPD70RRUQUUDPPFQZLHSG5BCTY6AKZLD
+  mpi_support: true
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/bin/{spades_core}
+  short_name: k21
+- STAGE: K33
+  args:
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K33/configs/config.info
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K33/configs/careful_mode.info
+  config_dir: K33
+  del_after: []
+  job_uuid: hpcSPAdes_K33_Z234RCG8TKSOYREPZJISN0GX5JJH8ELO
+  mpi_support: true
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/bin/{spades_core}
+  short_name: k33
+- STAGE: K55
+  args:
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K55/configs/config.info
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K55/configs/careful_mode.info
+  config_dir: K55
+  del_after: []
+  job_uuid: hpcSPAdes_K55_5OMBPPIZ2M7L39HEUUYVERMK24K9RCM8
+  mpi_support: true
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/bin/{spades_core}
+  short_name: k55
+- STAGE: K77
+  args:
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/configs/config.info
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/configs/careful_mode.info
+  config_dir: K77
+  del_after: []
+  job_uuid: hpcSPAdes_K77_9ZWDAGRXRWM8RYN82GWDL7K3CBHN66GU
+  mpi_support: true
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/bin/{spades_core}
+  short_name: k77
+- STAGE: Copy files
+  args:
+  - /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/share/spades/spades_pipeline/scripts/copy_files.py
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/before_rr.fasta
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/before_rr.fasta
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/assembly_graph_after_simplification.gfa
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/assembly_graph_after_simplification.gfa
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/final_contigs.fasta
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/contigs.fasta
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/first_pe_contigs.fasta
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/first_pe_contigs.fasta
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/strain_graph.gfa
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/strain_graph.gfa
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/scaffolds.fasta
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/scaffolds.fasta
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/scaffolds.paths
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/scaffolds.paths
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/assembly_graph_with_scaffolds.gfa
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/assembly_graph_with_scaffolds.gfa
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/assembly_graph.fastg
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/assembly_graph.fastg
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/K77/final_contigs.paths
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_d_pjkvvv
+  job_uuid: SPAdes_Copy_files_PYJUTB09D28FZG4ABVAOIKTNXWS2U40M
+  mpi_support: false
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/anaconda3/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_7YRHXRIJ2TZFC910ZK0L2JVC3WXTN5GV
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Mismatch correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Mismatch_correction_P9J1E5QKJABB5SOWD4MOY2SUJN2THJUI
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: mc_start
+- STAGE: Mismatch correction contigs
+  args:
+  - /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/share/spades/spades_pipeline/scripts/correction_iteration_script.py
+  - --corrected
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/contigs.fasta
+  - --assembled
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/misc/assembled_contigs.fasta
+  - --assembly_type
+  - contigs
+  - --output_dir
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades
+  - --bin_home
+  - /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/bin
+  config_dir: mismatch_corrector/contigs
+  del_after:
+  - mismatch_corrector/contigs/tmp
+  - tmp/corrector_q9vmobge
+  job_uuid: SPAdes_Mismatch_correction_contigs_NUNIX40ZRKVELSE767YPNIWLQ79WY3UF
+  mpi_support: false
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/anaconda3/bin/python3
+  short_name: mc_contigs
+- STAGE: Mismatch correction scaffolds
+  args:
+  - /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/share/spades/spades_pipeline/scripts/correction_iteration_script.py
+  - --corrected
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/scaffolds.fasta
+  - --assembled
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/misc/assembled_scaffolds.fasta
+  - --assembly_type
+  - scaffolds
+  - --output_dir
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades
+  - --bin_home
+  - /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/bin
+  config_dir: mismatch_corrector/scaffolds
+  del_after:
+  - mismatch_corrector/scaffolds/tmp
+  - tmp/corrector_w_0qsp3r
+  job_uuid: SPAdes_Mismatch_correction_scaffolds_68MXCB0THTH49YU69K09E7O57UKWFMNZ
+  mpi_support: false
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/anaconda3/bin/python3
+  short_name: mc_scaffolds
+- STAGE: Mismatch correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Mismatch_correction_W2OZXRDUXCNXAB08LQ9MXCLWFDFAZ4TX
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: mc_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /home/STUDY/FBMF/bioinformatics/soft/SPAdes-4.2.0-Linux/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/scaffolds.fasta
+  - --misc_dir
+  - /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Breaking_scaffolds_A31GUYLPAXMW6U33EP2C6OUNYH75G60I
+  mpi_support: false
+  output_files: []
+  path: /home/STUDY/FBMF/bioinformatics/anaconda3/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  job_uuid: SPAdes_Terminate_MDXZY5Q5KEWYE41YARKFESOLITVG2JYL
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: terminate

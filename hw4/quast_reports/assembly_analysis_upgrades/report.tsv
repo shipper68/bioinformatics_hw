@@ -1,0 +1,23 @@
+Assembly	SPAdes	SPAdes_upgrade	Velvet_k31	Velvet_upgrade
+# contigs (>= 0 bp)	49	47	541	13
+# contigs (>= 1000 bp)	1	1	0	0
+# contigs (>= 5000 bp)	0	0	0	0
+# contigs (>= 10000 bp)	0	0	0	0
+# contigs (>= 25000 bp)	0	0	0	0
+# contigs (>= 50000 bp)	0	0	0	0
+Total length (>= 0 bp)	15064	13998	51988	3453
+Total length (>= 1000 bp)	1069	1069	0	0
+Total length (>= 5000 bp)	0	0	0	0
+Total length (>= 10000 bp)	0	0	0	0
+Total length (>= 25000 bp)	0	0	0	0
+Total length (>= 50000 bp)	0	0	0	0
+# contigs	49	47	541	13
+Largest contig	1069	1069	414	503
+Total length	15064	13998	51988	3453
+GC (%)	45.47	45.37	47.88	44.92
+N50	440	440	104	243
+N90	148	147	61	207
+auN	484.1	487.9	114.7	289.3
+L50	12	11	185	6
+L90	37	36	456	12
+# N's per 100 kbp	0.00	0.00	0.00	0.00

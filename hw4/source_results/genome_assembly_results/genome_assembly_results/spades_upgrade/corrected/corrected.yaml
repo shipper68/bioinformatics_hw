@@ -1,0 +1,9 @@
+- "left reads":
+  - "/home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades_upgrade/corrected/clean_R100.0_0.cor.fastq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades_upgrade/corrected/clean_R200.0_0.cor.fastq.gz"
+  "single reads":
+  - "/home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades_upgrade/corrected/clean_R_unpaired00.0_0.cor.fastq.gz"
+  "type": "paired-end"

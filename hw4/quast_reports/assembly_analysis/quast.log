@@ -1,0 +1,89 @@
+/home/STUDY/FBMF/bioinformatics/anaconda3/bin/quast.py -o /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis -m 0 --threads 4 --gene-finding --labels SPAdes,Velvet_11,Velvet_k21,Velvet_k31 /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/scaffolds.fasta /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet/results/k11/contigs.fa /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet/results/k21/contigs.fa /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet/results/k31/contigs.fa
+
+Version: 5.3.0
+
+System information:
+  OS: Linux-5.14.0-611.47.1.el9_7.x86_64-x86_64-with-glibc2.34 (linux_64)
+  Python version: 3.13.9
+  CPUs number: 4
+
+Started: 2026-05-04 16:05:46
+
+Logging to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/quast.log
+
+CWD: /home/STUDY/FBMF/studfbmf02_01/hw4
+Main parameters: 
+  MODE: default, threads: 4, min contig length: 0, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  1  /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/spades/scaffolds.fasta ==> SPAdes
+  2  /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet/results/k11/contigs.fa ==> Velvet_11
+  3  /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet/results/k21/contigs.fa ==> Velvet_k21
+  4  /home/STUDY/FBMF/studfbmf02_01/hw4/genome_assembly_results/velvet/results/k31/contigs.fa ==> Velvet_k31
+
+2026-05-04 16:05:48
+Running Basic statistics processor...
+  Contig files: 
+    1  SPAdes
+    2  Velvet_11
+    3  Velvet_k21
+    4  Velvet_k31
+  Calculating N50 and L50...
+    1  SPAdes, N50 = 440, L50 = 12, auN = 484.1, Total length = 15064, GC % = 45.47, # N's per 100 kbp =  0.00
+    2  Velvet_11, N50 = 25, L50 = 1304, auN = 26.9, Total length = 79010, GC % = 49.49, # N's per 100 kbp =  0.00
+    3  Velvet_k21, N50 = 67, L50 = 702, auN = 77.4, Total length = 133813, GC % = 47.33, # N's per 100 kbp =  0.00
+    4  Velvet_k31, N50 = 104, L50 = 185, auN = 114.7, Total length = 51988, GC % = 47.88, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/GC_content_plot.pdf
+  Drawing SPAdes GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/SPAdes_GC_content_plot.pdf
+  Drawing Velvet_11 GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/Velvet_11_GC_content_plot.pdf
+  Drawing Velvet_k21 GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/Velvet_k21_GC_content_plot.pdf
+  Drawing Velvet_k31 GC content plot...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/Velvet_k31_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/coverage_histogram.pdf
+  Drawing SPAdes coverage histogram (bin size: 25x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/SPAdes_coverage_histogram.pdf
+  Drawing Velvet_11 coverage histogram (bin size: 1x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/Velvet_11_coverage_histogram.pdf
+  Drawing Velvet_k21 coverage histogram (bin size: 1x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/Velvet_k21_coverage_histogram.pdf
+  Drawing Velvet_k31 coverage histogram (bin size: 1x)...
+    saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/basic_stats/Velvet_k31_coverage_histogram.pdf
+Done.
+
+2026-05-04 16:05:50
+WARNING: GeneMark tool can't be started because of license limitations!
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-05-04 16:05:51
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2026-05-04 16:05:51
+RESULTS:
+  Text versions of total report are saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/report.html
+  PDF version (tables and plots) is saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/report.pdf
+  Icarus (contig browser) is saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/icarus.html
+  Log is saved to /home/STUDY/FBMF/studfbmf02_01/hw4/assembly_analysis/quast.log
+
+Finished: 2026-05-04 16:05:51
+Elapsed time: 0:00:05.405410
+NOTICEs: 1; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
